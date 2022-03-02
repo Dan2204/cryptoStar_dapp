@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StarNotary DAPP</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2840e;
+    }
+    #head {
+      text-align: center;
+      padding: 0;
+      background-color: #0e0e0d;
+    }
+    #head h1 {
+      margin: 0;
+      padding: 20px;
+      color: #4bd3f8;
+    }
+    .content {
+      --border-color: #0e0e0d68;
+      color: #0e0e0d;
+      margin: 3rem auto;
+      max-width: 500px;
+      background-color: #4bd3f8;
+      padding: 30px;
+      padding-left: 10%;
+      font-size: 1rem;
+      font-weight: bold;
+      border: 1px groove var(--border-color);
+      border-bottom: 6px groove var(--border-color);
+      border-left: 3px groove var(--border-color);
+      border-top-right-radius: 350px;
+      border-bottom-left-radius: 125px;
+      border-top-left-radius: 15px;
+    }
+
+    button {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f2840e;
+    }
+
+    hr {
+      margin-top: 30px;
+      width: 360px;
+      border-bottom-color: #0e0e0d;
+      margin-left: 0;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: #f2840e84;
+      color: #fff;
+    }
+
+    #starId,
+    #lookid {
+      width: 40px;
+    }
+
+    input {
+      /* display: block; */
+      margin-bottom: 12px;
+      margin-top: 5px;
+      font-size: 1rem;
+      padding: 5px;
+    }
+
+    .status-bar {
+      background-color: #0e0e0d;
+      position: absolute;
+      text-align: center;
+      height: 60px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .status-bar h2 {
+      color: #4bd3f8;
+      /* text-shadow: 1px 1px 2px #4bd3f8; */
+    }
+  </style>
+  <body>
+    <div id="head">
+      <h1>StarNotary Token DAPP</h1>
+    </div>
+    <div class="content">
+      <br />
+      <h1>Create a Star</h1>
+      <br />
+      <label for="starName">Star Name:</label>
+      <input type="text" id="starName" />
+      <br />
+      <label for="starId">Star ID:</label>
+      <input type="number" id="starId" />
+      <br /><br />
+      <button id="createStar" onclick="App.createStar()">Create Star</button>
+      <br />
+      <hr />
+      <br />
+      <h1>Look up a Star</h1>
+      <br />
+      <label for="name">Star ID:</label>
+      <input type="number" id="lookid" />
+      <br /><br />
+      <button onclick="App.lookUp()">Look Up a Star</button>
+      <hr />
+      <br />
+    </div>
+    <div class="status-bar">
+      <h2 id="status">DUMMY TEXT</h2>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
